@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Banco de Dados | Condo Connect</title>
+    <link rel="stylesheet" href="../global/global.css">
+    <link rel="stylesheet" href="../style/test-db.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="container nav-wrap">
+                <a href="inicio.html" class="logo" aria-label="Condo Connect início">
+                    <span class="brand-mark">C</span>
+                    <span class="brand-text">Condo Connect</span>
+                </a>
+                <nav class="nav-links" aria-label="Navegação principal">
+                    <a href="inicio.html">Início</a>
+                    <a href="cadastro.html">Cadastro</a>
+                    <a href="login.html">Login</a>
+                    <a href="test-db.html">Teste DB</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="testdb-page">
+            <div class="container testdb-grid">
+                <section class="testdb-sidebar">
+                    <h2>Banco de Dados de Teste</h2>
+                    <p>Use a interface abaixo para explorar CRUD de clientes, funcionários, usuários, conversas e mensagens.</p>
+                    <div class="testdb-tabs">
+                        <button data-section="clients" class="tab-button active">Clientes</button>
+                        <button data-section="employees" class="tab-button">Funcionários</button>
+                        <button data-section="users" class="tab-button">Logins</button>
+                        <button data-section="conversations" class="tab-button">Conversas</button>
+                        <button data-section="login" class="tab-button">Login</button>
+                    </div>
+                    <button id="reset-button" class="reset-button" type="button">Resetar banco</button>
+                </section>
+
+                <section class="testdb-panel">
+                    <div class="testdb-panel__header">
+                        <h3 id="section-title">Clientes</h3>
+                        <p id="section-description">Criar, atualizar e remover clientes do banco de teste.</p>
+                    </div>
+
+                    <div class="testdb-actions">
+                        <div class="testdb-list" id="list-container"></div>
+                        <div class="testdb-form" id="form-container"></div>
+                    </div>
+
+                    <div class="testdb-log" id="testdb-log">
+                        <h4>Logs</h4>
+                        <div id="log-output"></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="../scripts/test-db-ui.js"></script>
+</body>
+</html>

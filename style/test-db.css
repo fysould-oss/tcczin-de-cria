@@ -1,0 +1,227 @@
+.testdb-page {
+    padding: 2rem 0 3rem;
+}
+
+.testdb-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+}
+
+.testdb-sidebar {
+    background: rgba(255,255,255,0.92);
+    border-radius: 1.5rem;
+    padding: 1.6rem;
+    box-shadow: 0 16px 40px rgba(15, 47, 105, 0.12);
+}
+
+.testdb-sidebar h2 {
+    margin-top: 0;
+    color: var(--green-900);
+}
+
+.testdb-sidebar p {
+    margin: 0 0 1.5rem;
+    color: var(--text-muted);
+}
+
+.testdb-tabs {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.tab-button {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border: 1px solid rgba(15, 57, 106, 0.12);
+    background: #ffffff;
+    color: var(--green-900);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.tab-button:hover,
+.tab-button.active {
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, var(--green-100), #f3f7ff);
+    box-shadow: 0 10px 22px rgba(15, 47, 105, 0.12);
+}
+
+.reset-button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.95rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    background: rgba(222, 64, 76, 0.14);
+    color: #b22d3b;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 150ms ease, transform 150ms ease;
+}
+
+.reset-button:hover {
+    background: rgba(222, 64, 76, 0.22);
+    transform: translateY(-1px);
+}
+
+.testdb-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(255,255,255,0.96);
+    border-radius: 1.5rem;
+    padding: 1.8rem;
+    box-shadow: 0 16px 40px rgba(15, 47, 105, 0.12);
+}
+
+.testdb-panel__header h3,
+.testdb-panel__header p {
+    margin: 0;
+}
+
+.testdb-panel__header p {
+    margin-top: 0.35rem;
+    color: var(--text-muted);
+}
+
+.testdb-actions {
+    display: grid;
+    grid-template-columns: minmax(260px, 320px) 1fr;
+    gap: 1.25rem;
+}
+
+.testdb-list,
+.testdb-form {
+    background: #f8fbff;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(15, 57, 106, 0.08);
+}
+
+.testdb-list h4,
+.testdb-form h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--green-900);
+}
+
+.list-item,
+.message-item,
+.conversation-item {
+    background: rgba(255,255,255,0.9);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.85rem;
+    border: 1px solid rgba(15, 57, 106, 0.08);
+}
+
+.list-item:last-child,
+.message-item:last-child,
+.conversation-item:last-child {
+    margin-bottom: 0;
+}
+
+.list-item strong,
+.message-item strong,
+.conversation-item strong {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--green-900);
+}
+
+.list-item button,
+.message-item button,
+.conversation-item button,
+.testdb-form button,
+.login-form button {
+    cursor: pointer;
+    border: none;
+    border-radius: 999px;
+    padding: 0.65rem 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: var(--green-700);
+    transition: background 150ms ease;
+}
+
+.list-item button:hover,
+.message-item button:hover,
+.conversation-item button:hover,
+.testdb-form button:hover,
+.login-form button:hover {
+    background: var(--green-900);
+}
+
+.action-row {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+}
+
+.action-row button.secondary {
+    background: #ffffff;
+    color: var(--green-900);
+    border: 1px solid rgba(15, 57, 106, 0.14);
+}
+
+.testdb-form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+    color: var(--green-900);
+}
+
+.testdb-form input,
+.testdb-form textarea,
+.login-form input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(15, 57, 106, 0.12);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background: #ffffff;
+    color: #122c4f;
+}
+
+.testdb-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.testdb-log {
+    background: rgba(245, 248, 255, 0.95);
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(15, 57, 106, 0.08);
+}
+
+.testdb-log h4 {
+    margin-top: 0;
+    color: var(--green-900);
+}
+
+#log-output {
+    max-height: 220px;
+    overflow-y: auto;
+    font-family: monospace;
+    margin-top: 0.9rem;
+    color: var(--text-dark);
+}
+
+.log-line {
+    margin: 0 0 0.5rem;
+    line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+    .testdb-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testdb-actions {
+        grid-template-columns: 1fr;
+    }
+}
