@@ -20,4 +20,4 @@ Projeto web acadêmico para gestão de manutenção e comunicação em condomín
 - Criar dashboards por perfil
 - Desenvolver fluxo de chamados, anexos e acompanhamento
 
-https://prod.liveshare.vsengsaas.visualstudio.com/join?76E8699D433348FEE571C3790F11BD436F8B
+https://prod.liveshare.vsengsaas.visualstudio.com/join?F9CC91292EFDF8714349F9FB8B15F431E146
