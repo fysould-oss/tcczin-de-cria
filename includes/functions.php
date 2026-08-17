@@ -1,4 +1,4 @@
-<?php
+        <?php
 function getBasePath(): string
 {
     $script = ltrim($_SERVER['SCRIPT_NAME'] ?? '/', '/');
