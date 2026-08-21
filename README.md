@@ -21,3 +21,4 @@ Projeto web acadêmico para gestão de manutenção e comunicação em condomín
 - Desenvolver fluxo de chamados, anexos e acompanhamento
 
 https://prod.liveshare.vsengsaas.visualstudio.com/join?F9CC91292EFDF8714349F9FB8B15F431E146
+https://canva.link/8kt1i3bwfve5vbw
