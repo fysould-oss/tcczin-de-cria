@@ -1,0 +1,4 @@
+node_modules/
+.netlify/
+uploads/
+storage/*.sqlite

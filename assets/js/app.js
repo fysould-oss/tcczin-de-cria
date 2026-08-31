@@ -1,0 +1,16 @@
+const API = '/api';
+const session = { get: () => JSON.parse(localStorage.getItem('condoconnectSession') || 'null'), set: value => localStorage.setItem('condoconnectSession', JSON.stringify(value)), clear: () => localStorage.removeItem('condoconnectSession') };
+const request = async (path, options = {}) => { const current = session.get(); const response = await fetch(`${API}/${path}`, { ...options, headers: { 'Content-Type': 'application/json', ...(current ? { Authorization: `Bearer ${current.token}` } : {}), ...options.headers } }); const data = await response.json(); if (!response.ok) throw new Error(data.error || 'Não foi possível concluir a operação.'); return data; };
+const message = (form, text, error = false) => { let el = form.querySelector('.form-message'); if (!el) { el = document.createElement('p'); el.className = 'form-message alert'; form.prepend(el); } el.className = `form-message alert ${error ? 'alert-error' : 'alert-success'}`; el.textContent = text; };
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-logout]').forEach(link => link.addEventListener('click', () => session.clear()));
+  const register = document.querySelector('[data-register-form]');
+  if (register) register.addEventListener('submit', async e => { e.preventDefault(); const v = Object.fromEntries(new FormData(register)); if (v.senha !== v.confirmarSenha) return message(register, 'As senhas não conferem.', true); try { const data = await request('register', { method: 'POST', body: JSON.stringify(v) }); session.set(data); location.href = 'dashboard.html'; } catch (err) { message(register, err.message, true); } });
+  const login = document.querySelector('[data-login-form]');
+  if (login) login.addEventListener('submit', async e => { e.preventDefault(); try { const data = await request('login', { method: 'POST', body: JSON.stringify(Object.fromEntries(new FormData(login))) }); session.set(data); location.href = 'dashboard.html'; } catch (err) { message(login, err.message, true); } });
+  const ticketForm = document.querySelector('[data-ticket-form]');
+  if (ticketForm) ticketForm.addEventListener('submit', async e => { e.preventDefault(); try { await request('tickets', { method: 'POST', body: JSON.stringify(Object.fromEntries(new FormData(ticketForm))) }); location.href = 'dashboard.html'; } catch (err) { message(ticketForm, err.message, true); } });
+  const dashboard = document.querySelector('[data-dashboard]');
+  if (dashboard) loadDashboard(dashboard);
+});
+async function loadDashboard(root) { try { const me = await request('me'); const { tickets } = await request('tickets'); root.querySelector('[data-user-name]').textContent = me.user.nome; root.querySelector('[data-total]').textContent = tickets.length; for (const status of ['aberto', 'andamento', 'concluido']) root.querySelector(`[data-${status}]`).textContent = tickets.filter(t => t.status === status).length; const table = root.querySelector('[data-ticket-list]'); table.innerHTML = tickets.length ? tickets.map(t => `<tr><td>${t.protocolo}</td><td>${t.categoria}</td><td><span class="badge badge-${t.status}">${t.status}</span></td><td>${t.prioridade}</td></tr>`).join('') : '<tr><td colspan="4">Nenhum chamado criado ainda.</td></tr>'; } catch { session.clear(); location.href = 'login.html'; } }

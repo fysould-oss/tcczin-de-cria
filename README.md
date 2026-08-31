@@ -1,30 +1,32 @@
-﻿# CondoConnect
+# CondoConnect
 
-Projeto web acadêmico para gestão de manutenção e comunicação em condomínios.
+Aplicação para gestão de chamados em condomínios, preparada para publicação no Netlify.
 
-## Estrutura
-- `index.php`: página inicial pública
-- `pages/`: páginas públicas como Sobre, Serviços, Contato, FAQ, Login, Cadastro e recuperação de senha
-- `includes/`: cabeçalho, navegação, rodapé e helpers PHP reutilizáveis
-- `assets/`: CSS e JavaScript da interface
-- `config/`: configuração do projeto
-- `storage/`: banco SQLite local gerado automaticamente
+## Arquitetura
 
-## Como executar localmente
-1. Instale o PHP 8+ e rode o servidor na raiz do projeto:
-   `php -S 127.0.0.1:8000 -t .`
-2. Acesse `http://127.0.0.1:8000/` no navegador.
+- As páginas públicas estão em HTML (`index.html` e `pages/*.html`).
+- O frontend chama a API em `/.netlify/functions/api` por meio de `/api/*`.
+- A função serverless usa **Netlify Blobs** para persistir usuários e chamados.
+- Senhas são derivadas com `scrypt` antes de serem salvas.
+- O formulário de contato usa Netlify Forms.
 
-## Próximos passos
-- Implementar autenticação real e cadastro de usuários
-- Criar dashboards por perfil
-- Desenvolver fluxo de chamados, anexos e acompanhamento
+O Netlify não executa PHP nem mantém arquivos SQLite entre chamadas. Por isso, os arquivos PHP/SQLite legados não participam do deploy e não devem ser usados na versão hospedada.
 
-https://prod.liveshare.vsengsaas.visualstudio.com/join?F9CC91292EFDF8714349F9FB8B15F431E146
-https://canva.link/8kt1i3bwfve5vbw
+## Executar localmente
 
+1. Instale Node.js 20 ou superior.
+2. Instale as dependências: `npm install`.
+3. Instale e autentique a CLI do Netlify, se necessário: `npm install -g netlify-cli` e `netlify login`.
+4. Inicie: `npx netlify dev`.
 
+## Publicar no Netlify
 
-SONAR QUEBE 
+1. Envie este repositório ao GitHub.
+2. No Netlify, escolha **Add new site → Import an existing project**.
+3. Selecione o repositório e mantenha a configuração encontrada em `netlify.toml`.
+4. Clique em **Deploy site**.
 
-sqp_9b66c1608427fa47884bead72bef178fda2e4334
+## Limitações intencionais
+
+- Recuperação de senha depende da configuração de um serviço de e-mail.
+- Anexos de chamados exigem um storage de arquivos e foram removidos para não gravar dados no ambiente efêmero da função.
