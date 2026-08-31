@@ -1,6 +1,10 @@
 <?php
 $pageTitle = 'Início';
+<<<<<<< HEAD
 $metaDescription = 'CondoConnect reúne moradores, síndicos e prestadores em uma plataforma moderna para gestão de serviços em condomínios.';
+=======
+$metaDescription = 'ConectaPrédio é legal moradores, síndicos e prestadores em uma plataforma moderna para gestão de serviços em condomínios.';
+>>>>>>> 48415c1df16d7f4c7417ac36842397ad957aa99e
 $bodyClass = 'home-page';
 require __DIR__ . '/includes/header.php';
 ?>
