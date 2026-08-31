@@ -3,7 +3,7 @@ require_once __DIR__ . '/../includes/auth.php';
 requireLogin();
 
 $pageTitle = 'Novo chamado';
-$metaDescription = 'Abra um novo chamado de manutenção no ConectaPrédio.';
+$metaDescription = 'Abra um novo chamado de manutenção no CondoConnect.';
 $bodyClass = 'auth-page';
 $errorMessage = '';
 $successMessage = '';

@@ -3,7 +3,7 @@ require_once __DIR__ . '/../includes/auth.php';
 requireLogin();
 
 $pageTitle = 'Dashboard';
-$metaDescription = 'Painel principal do ConectaPrédio para moradores, prestadores e síndicos.';
+$metaDescription = 'Painel principal do CondoConnect para moradores, prestadores e síndicos.';
 $bodyClass = 'dashboard-page';
 require __DIR__ . '/../includes/header.php';
 
@@ -22,7 +22,7 @@ $roleLabel = [
         <div class="section-header" style="text-align:left; margin-bottom:26px;">
             <span>Dashboard</span>
             <h2>Olá, <?= sanitize($user['nome']) ?> 👋</h2>
-            <p>Você está acessando o painel do ConectaPrédio como <?= sanitize($roleLabel) ?>.</p>
+            <p>Você está acessando o painel do CondoConnect como <?= sanitize($roleLabel) ?>.</p>
         </div>
 
         <div class="dashboard-grid">

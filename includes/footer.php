@@ -7,11 +7,11 @@ $basePath = getBasePath();
             <div class="footer-brand">
                 <span>CP</span>
                 <div>
-                    <strong>ConectaPrédio</strong>
+                    <strong>CondoConnect</strong>
                     <p>Gestão inteligente para condomínios.</p>
                 </div>
             </div>
-            <p class="footer-copy">2026 © ConectaPrédio. Projeto acadêmico de TCC.</p>
+            <p class="footer-copy">2026 © CondoConnect. Projeto acadêmico de TCC.</p>
         </div>
         <nav class="footer-nav" aria-label="Rodapé">
             <a href="<?= $basePath ?>index.php">Início</a>

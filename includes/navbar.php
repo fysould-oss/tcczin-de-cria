@@ -10,7 +10,7 @@ $loggedIn = !empty($user);
         <a class="brand" href="<?= $basePath ?>index.php" aria-label="ConectaPrédio início">
             <span class="brand-mark">CP</span>
             <div>
-                <strong>ConectaPrédio</strong>
+                <strong>CondoConnect</strong>
                 <span>Gestão de serviços</span>
             </div>
         </a>

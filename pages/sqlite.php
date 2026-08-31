@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../includes/functions.php';
 
 $pageTitle = 'SQLite';
-$metaDescription = 'Visualize as tabelas e registros do banco SQLite do ConectaPrédio.';
+$metaDescription = 'Visualize as tabelas e registros do banco SQLite do CondoConnect.';
 $bodyClass = 'public-page';
 require __DIR__ . '/../includes/header.php';
 

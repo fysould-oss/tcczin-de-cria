@@ -10,7 +10,7 @@ require __DIR__ . '/../includes/header.php';
         <div class="section-header">
             <span>Serviços</span>
             <h2>Categorias disponíveis para o condomínio</h2>
-            <p>O ConectaPrédio organiza as demandas mais comuns de manutenção residencial.</p>
+            <p>O CondoConnect organiza as demandas mais comuns de manutenção residencial.</p>
         </div>
         <div class="service-list">
             <article class="service-card">

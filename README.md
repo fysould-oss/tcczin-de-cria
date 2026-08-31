@@ -1,4 +1,4 @@
-﻿# ConectaPrédio
+﻿# CondoConnect
 
 Projeto web acadêmico para gestão de manutenção e comunicação em condomínios.
 

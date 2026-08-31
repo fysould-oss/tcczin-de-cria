@@ -2,7 +2,7 @@
 require_once __DIR__ . '/functions.php';
 
 if (!isset($pageTitle)) {
-    $pageTitle = 'ConectaPrédio';
+    $pageTitle = 'CondoConnect';
 }
 if (!isset($metaDescription)) {
     $metaDescription = 'Plataforma para solicitação e acompanhamento de serviços em condomínios.';
@@ -18,12 +18,13 @@ $basePath = getBasePath();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= sanitize($pageTitle) ?> | ConectaPrédio</title>
+    <title><?= sanitize($pageTitle) ?> | CondoConnect</title>
     <meta name="description" content="<?= sanitize($metaDescription) ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= $basePath ?>assets/css/style.css?v=20260810">
+    <link rel="stylesheet" href="<?= $basePath ?>style/inicio.css?v=20260831">
     <style>
         body { margin: 0; font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f8fc; color: #172433; line-height: 1.65; }
         .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }

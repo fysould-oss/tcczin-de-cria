@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../includes/auth.php';
 
 $pageTitle = 'Login';
-$metaDescription = 'Acesse sua conta do ConectaPrédio.';
+$metaDescription = 'Acesse sua conta do CondoConnect.';
 $bodyClass = 'auth-page';
 $errorMessage = '';
 
@@ -32,7 +32,7 @@ require __DIR__ . '/../includes/header.php';
     <div class="container">
         <div class="auth-card">
             <p class="eyebrow">Acesso</p>
-            <h1>Entrar no ConectaPrédio</h1>
+            <h1>Entrar no CondoConnect</h1>
             <p>Use seus dados para acessar o painel e acompanhar seus chamados.</p>
 
             <?php if ($errorMessage !== ''): ?>

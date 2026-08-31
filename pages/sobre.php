@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Sobre';
-$metaDescription = 'Conheça o propósito do ConectaPrédio e como ele facilita a gestão de serviços de condomínios.';
+$metaDescription = 'Conheça o propósito do CondoConnect e como ele facilita a gestão de serviços de condomínios.';
 $bodyClass = 'public-page';
 require __DIR__ . '/../includes/header.php';
 ?>
@@ -10,7 +10,7 @@ require __DIR__ . '/../includes/header.php';
         <div class="section-header">
             <span>Sobre nós</span>
             <h2>Uma plataforma criada para resolver o problema da comunicação e da manutenção em condomínios.</h2>
-            <p>O ConectaPrédio reúne moradores, prestadores e síndicos em um ambiente organizado, seguro e pensado para uma gestão mais transparente.</p>
+            <p>O CondoConnect reúne moradores, prestadores e síndicos em um ambiente organizado, seguro e pensado para uma gestão mais transparente.</p>
         </div>
         <div class="content-grid">
             <article class="content-card">

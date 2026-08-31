@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Início';
-$metaDescription = 'ConectaPrédio reúne moradores, síndicos e prestadores em uma plataforma moderna para gestão de serviços em condomínios.';
+$metaDescription = 'CondoConnect reúne moradores, síndicos e prestadores em uma plataforma moderna para gestão de serviços em condomínios.';
 $bodyClass = 'home-page';
 require __DIR__ . '/includes/header.php';
 ?>
@@ -9,7 +9,7 @@ require __DIR__ . '/includes/header.php';
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <p class="eyebrow">ConectaPrédio</p>
+                <p class="eyebrow">CondoConnect</p>
                 <h1>Organize manutenção, comunicação e chamados em um só lugar.</h1>
                 <p>Uma plataforma moderna para moradores, prestadores e síndicos acompanharem serviços de condomínio com mais praticidade, transparência e agilidade.</p>
                 <div class="hero-actions">
@@ -200,3 +200,5 @@ require __DIR__ . '/includes/header.php';
 </main>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>
+cd C:\xampp\htdocs\tcczin-de-cria
+C:\xampp\php\php.exe -S 127.0.0.1:8000

@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../includes/auth.php';
 
 $pageTitle = 'Cadastro';
-$metaDescription = 'Crie sua conta no ConectaPrédio.';
+$metaDescription = 'Crie sua conta no CondoConnect.';
 $bodyClass = 'auth-page';
 $errorMessage = '';
 
