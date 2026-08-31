@@ -22,3 +22,9 @@ Projeto web acadêmico para gestão de manutenção e comunicação em condomín
 
 https://prod.liveshare.vsengsaas.visualstudio.com/join?F9CC91292EFDF8714349F9FB8B15F431E146
 https://canva.link/8kt1i3bwfve5vbw
+
+
+
+SONAR QUEBE 
+
+sqp_9b66c1608427fa47884bead72bef178fda2e4334
