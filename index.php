@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Início';
-$metaDescription = 'ConectaPrédio reúne moradores, síndicos e prestadores em uma plataforma moderna para gestão de serviços em condomínios.';
+$metaDescription = 'ConectaPrédio é legal moradores, síndicos e prestadores em uma plataforma moderna para gestão de serviços em condomínios.';
 $bodyClass = 'home-page';
 require __DIR__ . '/includes/header.php';
 ?>
