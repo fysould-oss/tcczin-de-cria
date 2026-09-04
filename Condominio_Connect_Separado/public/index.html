@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Condomínio Connect — serviços de manutenção e reforma para condomínios.">
+    <title>Condomínio Connect</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <noscript>Ative o JavaScript para utilizar o Condomínio Connect.</noscript>
+
+    <section id="auth-view" class="auth-layout">
+      <aside class="auth-hero">
+        <a class="brand brand--inverse" href="#" aria-label="Condomínio Connect">
+          <span class="brand__mark" aria-hidden="true">CC</span>
+          <span><strong>Condomínio</strong><small>Connect</small></span>
+        </a>
+        <div class="auth-hero__content">
+          <span class="eyebrow eyebrow--light">Serviços para condomínios</span>
+          <h1>Manutenção e reforma com organização e confiança.</h1>
+          <p>Encontre profissionais validados, acompanhe cada etapa e mantenha o histórico do serviço em um único lugar.</p>
+          <ul class="feature-list">
+            <li>Profissionais com CNPJ e documentos conferidos</li>
+            <li>Chamados, orçamentos e acompanhamento centralizados</li>
+            <li>Comunicação direta pelo chat da plataforma</li>
+          </ul>
+        </div>
+        <small>Produto desenvolvido pela SGB Tech</small>
+      </aside>
+
+      <main class="auth-panel">
+        <div class="auth-card">
+          <div class="brand brand--mobile">
+            <span class="brand__mark" aria-hidden="true">CC</span>
+            <span><strong>Condomínio</strong><small>Connect</small></span>
+          </div>
+          <span class="eyebrow">Acesso seguro</span>
+          <h2>Entre na sua conta</h2>
+          <p class="muted">Use o e-mail e a senha cadastrados.</p>
+
+          <form id="login-form" class="form-stack">
+            <label>E-mail
+              <input type="email" name="email" autocomplete="email" placeholder="voce@email.com" required>
+            </label>
+            <label>Senha
+              <input type="password" name="password" autocomplete="current-password" minlength="8" placeholder="Sua senha" required>
+            </label>
+            <button class="button button--primary button--wide" type="submit">Entrar</button>
+          </form>
+
+          <button id="open-register" class="button button--ghost button--wide" type="button">Criar uma conta</button>
+          <p id="auth-message" class="form-message" role="alert"></p>
+        </div>
+      </main>
+    </section>
+
+    <div id="app-view" class="app-shell is-hidden">
+      <header class="topbar">
+        <button class="brand brand--button" type="button" data-route="home">
+          <span class="brand__mark" aria-hidden="true">CC</span>
+          <span><strong>Condomínio</strong><small>Connect</small></span>
+        </button>
+        <nav id="desktop-nav" class="desktop-nav" aria-label="Navegação principal"></nav>
+        <div class="topbar__actions">
+          <button class="icon-button" type="button" data-route="notifications" aria-label="Notificações">
+            <span aria-hidden="true">●</span>
+          </button>
+          <div class="user-chip">
+            <span id="user-initials" class="avatar">US</span>
+            <span id="user-role">Usuário</span>
+          </div>
+          <button id="logout-button" class="icon-button" type="button" aria-label="Sair">↪</button>
+        </div>
+      </header>
+
+      <main id="page-content" class="page-content" tabindex="-1"></main>
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Navegação móvel"></nav>
+
+      <button id="chat-launcher" class="chat-launcher is-hidden" type="button" aria-label="Abrir chat do atendimento">
+        <span aria-hidden="true">✉</span>
+        <span>Chat</span>
+      </button>
+
+      <aside id="chat-panel" class="chat-panel is-hidden" aria-labelledby="chat-title">
+        <header class="chat-panel__header">
+          <div>
+            <strong id="chat-title">Conversa</strong>
+            <small id="chat-subtitle">Atendimento do chamado</small>
+          </div>
+          <button id="close-chat" class="icon-button icon-button--inverse" type="button" aria-label="Fechar chat">×</button>
+        </header>
+        <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+        <form id="chat-form" class="chat-form">
+          <input name="message" maxlength="2000" placeholder="Escreva uma mensagem" aria-label="Mensagem" required>
+          <button class="button button--primary" type="submit">Enviar</button>
+        </form>
+      </aside>
+    </div>
+
+    <dialog id="register-dialog" class="dialog">
+      <form id="register-form" class="dialog__content">
+        <header class="dialog__header">
+          <div>
+            <span class="eyebrow">Novo cadastro</span>
+            <h2>Crie sua conta</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-dialog="register-dialog" aria-label="Fechar">×</button>
+        </header>
+
+        <div class="segmented" role="group" aria-label="Tipo de conta">
+          <label><input type="radio" name="tipo" value="cliente" checked> Morador / síndico</label>
+          <label><input type="radio" name="tipo" value="profissional"> Profissional</label>
+        </div>
+
+        <div class="form-grid">
+          <label>Nome completo<input name="nome" maxlength="150" required></label>
+          <label>E-mail<input type="email" name="email" required></label>
+          <label>Telefone<input name="telefone" inputmode="tel" maxlength="20" required></label>
+          <label>Senha<input type="password" name="senha" minlength="8" required></label>
+        </div>
+
+        <section id="professional-fields" class="professional-fields is-hidden">
+          <div class="section-heading section-heading--compact">
+            <div><span class="eyebrow">Validação profissional</span><h3>Dados da empresa ou MEI</h3></div>
+          </div>
+          <div class="form-grid">
+            <label>CNPJ<input name="cnpj" inputmode="numeric" maxlength="18"></label>
+            <label>Razão social<input name="razao_social" maxlength="180"></label>
+            <label>Categoria<select name="categoria_id" id="register-category"></select></label>
+            <label>Anos de experiência<input type="number" name="anos_experiencia" min="0" max="80"></label>
+            <label class="form-grid__full">Região atendida<input name="regiao" maxlength="180"></label>
+            <label class="form-grid__full">Apresentação profissional<textarea name="descricao" maxlength="1000" rows="4"></textarea></label>
+            <label>Comprovante de CNPJ / CCMEI<input type="file" name="documento_cnpj" accept=".pdf,.jpg,.jpeg,.png"></label>
+            <label>Documento de identidade<input type="file" name="identificacao" accept=".pdf,.jpg,.jpeg,.png"></label>
+            <label>Certificado profissional<input type="file" name="certificado" accept=".pdf,.jpg,.jpeg,.png"></label>
+            <label>Portfólio de serviços<input type="file" name="portfolio" accept=".pdf,.jpg,.jpeg,.png"></label>
+          </div>
+          <p class="notice">Envie arquivos PDF, JPG ou PNG de até 5 MB. A SGB Tech confere CNPJ, identidade, certificado e portfólio antes de liberar o perfil.</p>
+        </section>
+
+        <p id="register-message" class="form-message" role="alert"></p>
+        <footer class="dialog__footer">
+          <button class="button button--secondary" type="button" data-close-dialog="register-dialog">Cancelar</button>
+          <button class="button button--primary" type="submit">Enviar cadastro</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <dialog id="details-dialog" class="dialog">
+      <div class="dialog__content dialog__content--small">
+        <header class="dialog__header">
+          <div><span class="eyebrow">Informações completas</span><h2 id="details-title">Detalhes</h2></div>
+          <button class="icon-button" type="button" data-close-dialog="details-dialog" aria-label="Fechar">×</button>
+        </header>
+        <div id="details-content" class="details-list"></div>
+        <footer class="dialog__footer"><button class="button button--primary" type="button" data-close-dialog="details-dialog">Concluir</button></footer>
+      </div>
+    </dialog>
+
+    <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <div id="loading-layer" class="loading-layer is-hidden" aria-live="polite"><span class="spinner"></span><span>Carregando...</span></div>
+
+    <script src="assets/js/api.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>
