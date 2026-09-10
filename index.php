@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Iníciu';
+$pageTitle = 'Início';
 <<<<<<< HEAD
 $metaDescription = 'CondoConnect reúne moradores, síndicos e prestadores em uma plataforma moderna para gestão de serviços em condomínios.';
 =======
