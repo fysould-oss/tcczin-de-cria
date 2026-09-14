@@ -1,6 +1,0 @@
-**/*.php
-storage/**
-uploads/**
-scripts/**
-style/test-db.css
-sonar-project.properties
