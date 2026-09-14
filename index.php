@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Início';
+$pageTitle = 'Iníciu';
 $metaDescription = 'CondoConnect é legal moradores, síndicos e prestadores em uma plataforma moderna para gestão de serviços em condomínios.';
 $bodyClass = 'home-page';
 require __DIR__ . '/includes/header.php';
